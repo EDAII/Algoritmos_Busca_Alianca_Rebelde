@@ -4,7 +4,7 @@
 <div align="center">
     Figura 1: Aliança Rebelde
     <br>
-    <img src="" width="500">
+    <img src="https://raw.githubusercontent.com/EDAII/Algoritmos_Busca_Alianca_Rebelde/refs/heads/main/Imagens/alianca_simbolo.png" width="500">
     <br>
     <br>
 </div>
