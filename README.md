@@ -1,6 +1,15 @@
 # Algoritmos_Busca_Alianca_Rebelde
 ## Star Wars: Aliança Rebelde - Arquivos da Rebelião
 
+<div align="center">
+    Figura 1: Aliança Rebelde
+    <br>
+    <img src="" width="500">
+    <br>
+    <br>
+</div>
+
+
 ### Organizar para conquistar, buscar para vencer!
 
 **"Aliança Rebelde - Arquivos da Rebelião"** é um jogo de puzzle e simulação, onde o jogador assume o papel de um(a) Analista de Inteligência da Aliança Rebelde. Sua missão é mergulhar em bancos de dados Imperiais capturados, organizar informações cruciais e encontrar dados vitais para as operações da Aliança. Cada desafio do jogo é uma simulação de como os algoritmos de busca e ordenação são aplicados para transformar dados brutos em vantagem estratégica, com uma narrativa inspirada no universo Star Wars.
