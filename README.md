@@ -40,3 +40,21 @@ Cada missão é um minigame projetado para ensinar a lógica e as etapas de um a
 - **Missão 4:** Acesso Rápido aos Arquivos da Frota - Hashing
   - **Objetivo:** Usar o código de registro de uma nave (a "chave") para acessar instantaneamente suas especificações em um grande catálogo.
 
+## Link do vídeo
+
+
+## Screenshots
+
+
+## Instalação
+
+### 1. Pré-requisitos
+
+Antes de começar, certifique-se de que você tem os seguintes softwares instalados:
+* **Python 3:** O jogo foi desenvolvido usando Python 3 (versão 3.7 ou superior é recomendada). Você pode baixar o Python em [python.org](https://python.org).
+* **Git:** Necessário para clonar o repositório do jogo. Você pode baixar o Git em [git-scm.com](https://git-scm.com).
+* **Tkinter (ou outra biblioteca gráfica):** Se for usar interface gráfica, especifique aqui. Para Tkinter:
+    * **Windows e macOS:** Geralmente, o Tkinter já vem instalado com o Python.
+    * **Linux (Debian/Ubuntu):** `sudo apt-get update && sudo apt-get install python3-tk`
+
+### 2. Configuração do Jogo
