@@ -49,9 +49,14 @@ class Missao4:
         for widget in self.base_content_frame.winfo_children():
             widget.destroy()
 
-    def iniciar_missao_contexto(self):
+    def iniciar_missao_contexto(self, image_to_display=None):
         self._limpar_frame()
         tk.Label(self.base_content_frame, text="Operação HASH-1138: Decifrando o Catálogo da Frota", font=self.font_titulo, fg=self.cor_titulo, bg=self.cor_fundo).pack(pady=(10, 15))
+        
+        if image_to_display:
+            imagem_label = tk.Label(self.base_content_frame, image=image_to_display, bg=self.cor_fundo)
+            imagem_label.pack(pady=(10, 10))
+    
         contexto = "Fulcrum: Comandante, interceptamos um catálogo da frota Imperial de uma base de suprimentos em Ryloth. Os arquivos não estão em ordem, mas o Império os organiza usando uma técnica de 'hashing' para acesso rápido. Nossa missão é reverter o processo para encontrar as especificações de naves de carga que a Aliança precisa desesperadamente. O droide de protocolo R7-X irá guiar você através dos protocolos Imperiais."
         tk.Label(self.base_content_frame, text=contexto, wraplength=700, justify=tk.LEFT, font=self.font_narrativa, fg=self.cor_texto, bg=self.cor_fundo).pack(pady=10, padx=20)
         ttk.Button(self.base_content_frame, text="Iniciar Análise de Hashing...", command=lambda: self.iniciar_etapa(0), style="Accent.Dark.TButton").pack(pady=20)

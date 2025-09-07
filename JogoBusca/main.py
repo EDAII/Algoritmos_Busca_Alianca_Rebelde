@@ -67,7 +67,8 @@ class GameManager:
         self.update_display()
     
     def carregar_imagens(self):
-        nomes_imagens = {"Alianca_Rebelde.png": 2}
+        # Reduzir o fator de subsample para missao1.png para que ela não fique muito pequena
+        nomes_imagens = {"Alianca_Rebelde.png": 2, "alianca_simbolo.png": 2, "missao1.png": 1} 
         for nome_img, subsample_factor in nomes_imagens.items():
             try:
                 caminho_img = os.path.join(self.img_dir, nome_img)
@@ -124,7 +125,10 @@ class GameManager:
             )
         elif self.game_state == "INTRODUCAO":
             narrativa = [
-                "Fulcrum: Bem-vindo(a), Analista de Inteligência. O Império construiu um sistema de arquivos complexo para esconder suas fraquezas. Sua tarefa é usar os algoritmos mais eficientes para extrair dados vitais e dar à Aliança a vantagem de que precisamos. Sua jornada começa agora. Que a Força esteja com você."
+                "Bem-vindo(a), Analista de Inteligência.",
+                "O Império construiu um sistema de arquivos complexo para esconder suas fraquezas.",
+                "Sua tarefa é usar os algoritmos mais eficientes para extrair dados vitais e dar à Aliança a vantagem de que precisamos.",
+                "Sua jornada começa agora. Que a Força esteja com você."
             ]
             self._display_text_screen(
                 "Iniciando Operações",
@@ -132,14 +136,14 @@ class GameManager:
                 "Iniciar Missão 1",
                 "START_MISSION_1",
                 button_style="Accent.TButton",
-                image_to_display=self.imagens.get("Alianca_Rebelde.png")
+                image_to_display=self.imagens.get("alianca_simbolo.png")
             )
         
         elif self.game_state == "START_MISSION_1":
             if Missao1:
-                self._clear_content_frame()
+                self._clear_content_frame() 
                 self.current_mission_obj = Missao1(self.root, self, self.content_frame)
-                self.current_mission_obj.iniciar_missao_contexto()
+                self.current_mission_obj.iniciar_missao_contexto(image_to_display=self.imagens.get("missao1.png"))
             else:
                 self._display_mission_not_found("Missão 1")
         elif self.game_state == "MISSION_1_SUCCESS":
@@ -176,7 +180,7 @@ class GameManager:
         elif self.game_state == "MISSION_4_SUCCESS":
             self._display_text_screen(
                 "Sucesso Final da Operação!",
-                ["Parabéns, Comandante! Todas as missões foram concluídas com êxito. Sua habilidade analítica provou ser um recurso inestimável para a Aliança Rebelde."],
+                ["Parabéns, Comandante! Todas as missões foram concluídas com êxito.", "Sua habilidade analítica provou ser um recurso inestimável para a Aliança Rebelde."],
                 "Ver o Epílogo",
                 "ALL_MISSIONS_COMPLETED_V3",
                 button_style="Accent.TButton",
@@ -184,7 +188,9 @@ class GameManager:
 
         elif self.game_state == "ALL_MISSIONS_COMPLETED_V3":
             narrativa = [
-                "A rebelião agora possui os dados que precisava. Sua inteligência e sua dedicação foram cruciais para o sucesso da Aliança. Sua missão está completa, analista. O futuro da galáxia está em boas mãos. Que a Força esteja com você."
+                "A rebelião agora possui os dados que precisava. Sua inteligência e sua dedicação foram cruciais para o sucesso da Aliança.",
+                "Sua missão está completa, analista. O futuro da galáxia está em boas mãos.",
+                "Que a Força esteja com você."
             ]
             self._display_text_screen(
                 "Operação Concluída",
@@ -192,7 +198,7 @@ class GameManager:
                 "Encerrar Jogo",
                 self.root.destroy,
                 button_style="Accent.TButton",
-                image_to_display=self.imagens.get("Alianca_Rebelde.png")
+                image_to_display=self.imagens.get("alianca_simbolo.png")
             )
         
         else:

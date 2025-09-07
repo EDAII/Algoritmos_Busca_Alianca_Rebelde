@@ -49,7 +49,7 @@ class Missao1:
         for widget in self.base_content_frame.winfo_children():
             widget.destroy()
 
-    def iniciar_missao_contexto(self):
+    def iniciar_missao_contexto(self, image_to_display=None):
         self._limpar_frame()
         tk.Label(
             self.base_content_frame,
@@ -58,6 +58,10 @@ class Missao1:
             fg=self.cor_titulo,
             bg=self.cor_fundo
         ).pack(pady=(10, 15))
+        
+        if image_to_display:
+            imagem_label = tk.Label(self.base_content_frame, image=image_to_display, bg=self.cor_fundo)
+            imagem_label.pack(pady=(10, 10))
 
         contexto = (
             "Fulcrum: Comandante, temos um relatório urgente. Suspeitamos que um carregamento ilegal "
