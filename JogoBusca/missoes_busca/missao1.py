@@ -11,15 +11,21 @@ class Missao1:
         self.base_content_frame = content_frame
 
         self.etapas_info = [
-            {"titulo": "Fase 1: O Ponto de Partida", "narrativa": "Fulcrum: Comandante, um informante nos enviou um código de contêiner que contém as coordenadas para uma operação vital. No entanto, o Império misturou o contêiner em um hangar enorme. Você precisará inspecionar o contêiner de carga um por um, na ordem em que eles aparecem, até encontrar o que buscamos. O código de registro que você procura é: ", "alvo_tipo": "id"},
-            {"titulo": "Fase 2: A Chave Oculta", "narrativa": "R7-X: O primeiro contêiner não continha as coordenadas diretamente, mas sim um mapa estelar codificado. Use a descrição do mapa para localizar o próximo contêiner na sequência, que é o nosso próximo passo para decifrar as coordenadas. O item que você procura tem a seguinte descrição: ", "alvo_tipo": "conteudo"},
-            {"titulo": "Fase 3: A Carga Vital", "narrativa": "R7-X: Os dados do mapa apontam para um último contêiner. Este, de acordo com o informante, guarda o verdadeiro item de contrabando. Prossiga com a busca sequencial e garanta a carga. O código de registro é: ", "alvo_tipo": "id"}
+            {"titulo": "Fase 1: A Chave Principal", "narrativa": "Fulcrum: Comandante, um informante nos enviou um código de contêiner que contém as coordenadas para uma operação vital. No entanto, o Império misturou o contêiner em um hangar enorme. Você precisará inspecionar o contêiner de carga um por um, na ordem em que eles aparecem, até encontrar o que buscamos. O código de registro que você procura é: ", "alvo_tipo": "id"},
+            {"titulo": "Fase 2: Otimizando a Lista", "narrativa": "R7-X: A busca foi bem-sucedida, mas poderíamos ter sido mais rápidos. Agora, prevemos que uma nova mensagem vital esteja em um contêiner recém-adicionado. Para economizar tempo, reorganizaremos os dados. Qual método você prefere?", "alvo_tipo": "id"},
+            {"titulo": "Fase 3: Busca Indexada", "narrativa": "R7-X: Agora estamos lidando com um catálogo massivo de contêineres. Fazer uma busca sequencial completa seria ineficiente. A Aliança preparou uma tabela de índices para agilizar o processo. Encontre o índice correto para o bloco de contêineres, e então comece sua busca."}
         ]
         self.etapa_atual = 0
         
         self.catalogo_missao = []
+        self.tabela_indices = []
         self.alvo_atual = None
         self.indice_busca = 0
+        self.alvo_fase_1 = None
+        self.alvo_fase_2 = None
+        self.alvo_final = None
+        
+        self.index_size = 10 # Tamanho do índice para a Fase 3
 
         self._carregar_estilos()
 
@@ -78,22 +84,57 @@ class Missao1:
         ).pack(pady=20)
 
     def iniciar_etapa(self):
+        self.indice_busca = 0
+        
         if self.etapa_atual == 0:
-            self.catalogo_missao = random.sample(CATALOGO_HANGAR, 15)
+            self.catalogo_missao = random.sample(CATALOGO_HANGAR, 20)
             self.alvo_fase_1 = random.choice(self.catalogo_missao)
             self.alvo_fase_2 = {'id': 'S-C-1138', 'conteudo': 'Mapa Estelar Codificado'}
             self.alvo_final = {'id': 'CONTRABANDO-1138', 'conteudo': 'Detonadores Térmicos'}
             
-            # Adiciona os alvos no catálogo de forma que a busca sequencial seja necessária
-            self.catalogo_missao.append(self.alvo_fase_1)
-            self.catalogo_missao.append(self.alvo_fase_2)
-            self.catalogo_missao.append(self.alvo_final)
-
+            # Garante que os alvos estão na lista
+            if self.alvo_fase_1 not in self.catalogo_missao:
+                self.catalogo_missao.append(self.alvo_fase_1)
+            if self.alvo_fase_2 not in self.catalogo_missao:
+                self.catalogo_missao.append(self.alvo_fase_2)
+            if self.alvo_final not in self.catalogo_missao:
+                self.catalogo_missao.append(self.alvo_final)
+            
             random.shuffle(self.catalogo_missao)
+            self.alvo_atual = self.alvo_fase_1['id']
+            self._montar_tela_busca()
+        
+        elif self.etapa_atual == 1:
+            self.alvo_atual = self.alvo_fase_2['conteudo']
+            self._montar_tela_busca()
 
-        self._montar_tela_busca()
+        elif self.etapa_atual == 2:
+            self.catalogo_missao = sorted(random.sample(CATALOGO_HANGAR, 400), key=lambda x: x['id'])
+            
+            # Cria a tabela de índices
+            self.tabela_indices = self._criar_tabela_indices()
+            
+            # Garante que o alvo final esteja em uma posição conhecida
+            indice_pista = random.randint(0, self.index_size - 1)
+            posicao_inicial = self.tabela_indices[indice_pista]['posicao']
+            posicao_alvo = posicao_inicial + 8
+            if posicao_alvo >= len(self.catalogo_missao):
+                posicao_alvo = len(self.catalogo_missao) - 1
+                
+            self.alvo_final = self.catalogo_missao[posicao_alvo]
+            
+            self.alvo_atual = self.alvo_final['id']
+            self._montar_tela_busca(pista_id=self.tabela_indices[indice_pista]['id'])
 
-    def _montar_tela_busca(self):
+    def _criar_tabela_indices(self):
+        tabela = []
+        passo = len(self.catalogo_missao) // self.index_size
+        for i in range(self.index_size):
+            indice = i * passo
+            tabela.append({'id': self.catalogo_missao[indice]['id'], 'posicao': indice})
+        return tabela
+
+    def _montar_tela_busca(self, pista_id=None):
         self._limpar_frame()
         etapa = self.etapas_info[self.etapa_atual]
         
@@ -115,19 +156,29 @@ class Missao1:
             bg=self.cor_fundo
         ).pack(pady=(10, 15))
 
+        narrativa_principal = etapa["narrativa"]
+        narrativa_extra = ""
+        
         if self.etapa_atual == 0:
-            self.alvo_atual = self.alvo_fase_1['id']
-            narrativa_extra = f"O código de registro que você procura é: `{self.alvo_atual}`."
+            narrativa_extra = f"\n\nO código de registro que você procura é: `{self.alvo_fase_1['id']}`."
         elif self.etapa_atual == 1:
-            self.alvo_atual = self.alvo_fase_2['conteudo']
-            narrativa_extra = f"A descrição que você procura é: `{self.alvo_atual}`."
+            narrativa_extra = f"\n\nA descrição que você procura é: `{self.alvo_fase_2['conteudo']}`."
+            ttk.Button(info_frame, text="Mover-para-Frente", command=self._reorganizar_mover_frente, style="Accent.Dark.TButton").pack(pady=5)
+            ttk.Button(info_frame, text="Transposição", command=self._reorganizar_transposicao, style="Accent.Dark.TButton").pack(pady=5)
         elif self.etapa_atual == 2:
-            self.alvo_atual = self.alvo_final['id']
-            narrativa_extra = f"O código de registro final é: `{self.alvo_atual}`."
+            narrativa_extra = f"\n\nO código de registro final é: `{self.alvo_final['id']}`."
+            
+            if pista_id:
+                narrativa_extra += f"\n\nR7-X: Com base nas últimas interceptações, a chave que você procura deve estar em um bloco de contêineres que começa com o ID `{pista_id}`. Clique no índice correspondente para iniciar sua busca."
+            
+            tk.Label(info_frame, text="Tabela de Índices:", font=self.font_subtitulo, fg=self.cor_titulo, bg=self.cor_fundo).pack(pady=(10, 5))
+            for i, indice in enumerate(self.tabela_indices):
+                ttk.Button(info_frame, text=f"Índice {i}: {indice['id']}", command=lambda pos=indice['posicao']: self._iniciar_busca_indexada(pos), style="Dark.TButton").pack(pady=2, fill=tk.X)
+
 
         self.label_narrativa = tk.Label(
             info_frame,
-            text=etapa["narrativa"] + narrativa_extra,
+            text=narrativa_principal + narrativa_extra,
             wraplength=380,
             justify=tk.LEFT,
             font=self.font_narrativa,
@@ -174,11 +225,27 @@ class Missao1:
             )
             btn.pack(side=tk.TOP, padx=5, pady=2, fill=tk.X)
             self.botoes_contaners.append(btn)
+
+    def _reorganizar_mover_frente(self):
+        # Mover para frente (não implementado, apenas para simulação)
+        pass
+        messagebox.showinfo("Método Mover-para-Frente", "A lista de contêineres foi reorganizada! Continue a busca.")
+        self.iniciar_etapa()
+
+    def _reorganizar_transposicao(self):
+        # Transposição (não implementado, apenas para simulação)
+        pass
+        messagebox.showinfo("Método de Transposição", "A lista de contêineres foi reorganizada! Continue a busca.")
+        self.iniciar_etapa()
     
+    def _iniciar_busca_indexada(self, inicio_busca):
+        self.indice_busca = inicio_busca
+        messagebox.showinfo("Busca Indexada", f"Iniciando busca a partir do índice {inicio_busca}. Agora use a busca sequencial.")
+
     def _verificar_item(self, indice_clicado):
         item_inspecionado = self.catalogo_missao[indice_clicado]
         
-        # Simula a busca sequencial
+        # Valida a busca sequencial
         if indice_clicado != self.indice_busca:
             self.game_manager.add_score(-5)
             self.label_feedback.config(text="R7-X: Inspeção fora de ordem! Mantenha a sequência.")
