@@ -76,7 +76,7 @@ class Missao4:
         if len(chaves_exemplo) < 2:
             # Fallback caso não encontre colisão no banco grande
             chaves_exemplo = gerar_chaves_com_colisao(self.tamanho_tabela_simulacao, num_colisoes=2)
-
+        
         self.chave_alvo = random.choice(chaves_exemplo)['chave']
         
         self.dados_etapa['catalogo_pequeno_cheio'] = construir_tabela_hash_encadeamento(BANCO_DE_DADOS_PEQUENO, self.tamanho_tabela_simulacao)

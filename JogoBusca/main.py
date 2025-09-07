@@ -124,10 +124,7 @@ class GameManager:
             )
         elif self.game_state == "INTRODUCAO":
             narrativa = [
-                "Bem-vindo(a), Analista de Inteligência.",
-                "O Império construiu um sistema de arquivos complexo para esconder suas fraquezas.",
-                "Sua tarefa é usar os algoritmos mais eficientes para extrair dados vitais e dar à Aliança a vantagem de que precisamos.",
-                "Sua jornada começa agora. Que a Força esteja com você."
+                "Fulcrum: Bem-vindo(a), Analista de Inteligência. O Império construiu um sistema de arquivos complexo para esconder suas fraquezas. Sua tarefa é usar os algoritmos mais eficientes para extrair dados vitais e dar à Aliança a vantagem de que precisamos. Sua jornada começa agora. Que a Força esteja com você."
             ]
             self._display_text_screen(
                 "Iniciando Operações",
@@ -179,7 +176,7 @@ class GameManager:
         elif self.game_state == "MISSION_4_SUCCESS":
             self._display_text_screen(
                 "Sucesso Final da Operação!",
-                ["Parabéns, Comandante! Todas as missões foram concluídas com êxito.", "Sua habilidade analítica provou ser um recurso inestimável para a Aliança Rebelde."],
+                ["Parabéns, Comandante! Todas as missões foram concluídas com êxito. Sua habilidade analítica provou ser um recurso inestimável para a Aliança Rebelde."],
                 "Ver o Epílogo",
                 "ALL_MISSIONS_COMPLETED_V3",
                 button_style="Accent.TButton",
@@ -187,9 +184,7 @@ class GameManager:
 
         elif self.game_state == "ALL_MISSIONS_COMPLETED_V3":
             narrativa = [
-                "A rebelião agora possui os dados que precisava. Sua inteligência e sua dedicação foram cruciais para o sucesso da Aliança.",
-                "Sua missão está completa, analista. O futuro da galáxia está em boas mãos.",
-                "Que a Força esteja com você."
+                "A rebelião agora possui os dados que precisava. Sua inteligência e sua dedicação foram cruciais para o sucesso da Aliança. Sua missão está completa, analista. O futuro da galáxia está em boas mãos. Que a Força esteja com você."
             ]
             self._display_text_screen(
                 "Operação Concluída",
@@ -211,7 +206,7 @@ class GameManager:
 
     def display_sucesso_missao(self, mission_id):
         self._clear_content_frame()
-        tk.Label(self.content_frame, text=f"Missão {mission_id} Concluída!", font=self.header_font_obj, fg="green", bg=self.bg_color_dark).pack(pady=20)
+        tk.Label(self.content_frame, text=f"Missão {mission_id.replace('Missao', ' ')} Concluída!", font=self.header_font_obj, fg="green", bg=self.bg_color_dark).pack(pady=20)
         tk.Label(self.content_frame, text="Excelente trabalho, Analista! Os dados foram recuperados com sucesso. Preparando para a próxima missão...", wraplength=700, justify=tk.CENTER, font=self.narrative_font_obj, fg=self.fg_color_light, bg=self.bg_color_dark).pack(padx=20, pady=10)
         
         next_mission_number = int(mission_id.replace("Missao", "")) + 1
