@@ -45,6 +45,51 @@ Cada missão é um minigame projetado para ensinar a lógica e as etapas de um a
 
 ## Screenshots
 
+Abaixo estão os screenshots do projeto
+
+
+### Código
+
+<div align="center">
+    Figura 3 
+    <br>
+    <img src="https://raw.githubusercontent.com/EDAII/Algoritmos_Busca_Alianca_Rebelde/refs/heads/main/Imagens/imagemcodigo.png" width="800">
+    <br>
+    <b>Autoras:</b> Larissa Stéfane e Mylena Angélica </a>.
+    <br>
+</div>
+
+### Intro
+
+<div align="center">
+    Figura 3 
+    <br>
+    <img src="https://raw.githubusercontent.com/EDAII/Algoritmos_Busca_Alianca_Rebelde/refs/heads/main/Imagens/intro1.png" width="800">
+    <br>
+    <b>Autoras:</b> Larissa Stéfane e Mylena Angélica </a>.
+    <br>
+</div>
+
+
+<div align="center">
+    Figura 4 
+    <br>
+    <img src="https://raw.githubusercontent.com/EDAII/Algoritmos_Busca_Alianca_Rebelde/refs/heads/main/Imagens/intro2.png" width="800">
+    <br>
+    <b>Autoras:</b> Larissa Stéfane e Mylena Angélica </a>.
+    <br>
+</div>
+
+
+### Missão 1 - Busca Sequencial
+
+### Missão 2 - Busca Binária
+
+### Missão 3 - Busca por Interpolação
+
+### Missão 4 - Hashing
+
+### Finalização
 
 ## Instalação
 
