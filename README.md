@@ -143,6 +143,51 @@ Abaixo estão os screenshots do projeto
 
 ### Missão 4 - Hashing
 
+<div align="center">
+    Figura 11 
+    <br>
+    <img src="https://raw.githubusercontent.com/EDAII/Algoritmos_Busca_Alianca_Rebelde/refs/heads/main/Imagens/missao4_1.png" width="800">
+    <br>
+    <b>Autoras:</b> Larissa Stéfane e Mylena Angélica </a>.
+    <br>
+</div>
+
+<div align="center">
+    Figura 12 
+    <br>
+    <img src="https://raw.githubusercontent.com/EDAII/Algoritmos_Busca_Alianca_Rebelde/refs/heads/main/Imagens/missao4_2.png" width="800">
+    <br>
+    <b>Autoras:</b> Larissa Stéfane e Mylena Angélica </a>.
+    <br>
+</div>
+
+<div align="center">
+    Figura 13 
+    <br>
+    <img src="https://raw.githubusercontent.com/EDAII/Algoritmos_Busca_Alianca_Rebelde/refs/heads/main/Imagens/missao4_3.png" width="800">
+    <br>
+    <b>Autoras:</b> Larissa Stéfane e Mylena Angélica </a>.
+    <br>
+</div>
+
+<div align="center">
+    Figura 14 
+    <br>
+    <img src="https://raw.githubusercontent.com/EDAII/Algoritmos_Busca_Alianca_Rebelde/refs/heads/main/Imagens/missao4_4.png" width="800">
+    <br>
+    <b>Autoras:</b> Larissa Stéfane e Mylena Angélica </a>.
+    <br>
+</div>
+
+<div align="center">
+    Figura 15 
+    <br>
+    <img src="https://raw.githubusercontent.com/EDAII/Algoritmos_Busca_Alianca_Rebelde/refs/heads/main/Imagens/missao4_5.png" width="800">
+    <br>
+    <b>Autoras:</b> Larissa Stéfane e Mylena Angélica </a>.
+    <br>
+</div>
+
 ### Finalização
 
 ## Instalação
