@@ -58,3 +58,15 @@ Antes de começar, certifique-se de que você tem os seguintes softwares instala
     * **Linux (Debian/Ubuntu):** `sudo apt-get update && sudo apt-get install python3-tk`
 
 ### 2. Configuração do Jogo
+
+1. **Clone o Repositório**: Abra o terminal ou prompt de comando e execute o seguinte comando para clonar o repositório do jogo.
+
+      - git clone <>
+
+      - cd JogoBusca
+
+2. **Verifique a Estrutura de Arquivos:** Certifique-se de que a estrutura de diretórios esteja correta, com pastas como missoes_busca, algoritmos_busca, BancoDados e img, e os arquivos .py e de imagem dentro delas.
+
+3. **Execute o Jogo:** Com o terminal ainda na pasta JogoBusca, inicie o jogo com o seguinte comando:
+
+     - python3 main.py
