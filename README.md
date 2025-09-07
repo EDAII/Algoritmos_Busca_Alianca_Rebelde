@@ -61,7 +61,7 @@ Antes de começar, certifique-se de que você tem os seguintes softwares instala
 
 1. **Clone o Repositório**: Abra o terminal ou prompt de comando e execute o seguinte comando para clonar o repositório do jogo.
 
-      - git clone <>
+      - git clone <git@github.com:EDAII/Algoritmos_Busca_Alianca_Rebelde.git>
 
       - cd JogoBusca
 
