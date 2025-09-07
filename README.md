@@ -83,6 +83,60 @@ Abaixo estão os screenshots do projeto
 
 ### Missão 1 - Busca Sequencial
 
+<div align="center">
+    Figura 5 
+    <br>
+    <img src="https://raw.githubusercontent.com/EDAII/Algoritmos_Busca_Alianca_Rebelde/refs/heads/main/Imagens/missao1_1.png" width="800">
+    <br>
+    <b>Autoras:</b> Larissa Stéfane e Mylena Angélica </a>.
+    <br>
+</div>
+
+<div align="center">
+    Figura 6 
+    <br>
+    <img src="https://raw.githubusercontent.com/EDAII/Algoritmos_Busca_Alianca_Rebelde/refs/heads/main/Imagens/missao1_2.png" width="800">
+    <br>
+    <b>Autoras:</b> Larissa Stéfane e Mylena Angélica </a>.
+    <br>
+</div>
+
+<div align="center">
+    Figura 7 
+    <br>
+    <img src="https://raw.githubusercontent.com/EDAII/Algoritmos_Busca_Alianca_Rebelde/refs/heads/main/Imagens/missao1_3.png" width="800">
+    <br>
+    <b>Autoras:</b> Larissa Stéfane e Mylena Angélica </a>.
+    <br>
+</div>
+
+<div align="center">
+    Figura 8
+    <br>
+    <img src="https://raw.githubusercontent.com/EDAII/Algoritmos_Busca_Alianca_Rebelde/refs/heads/main/Imagens/missao1_4.png" width="800">
+    <br>
+    <b>Autoras:</b> Larissa Stéfane e Mylena Angélica </a>.
+    <br>
+</div>
+
+<div align="center">
+    Figura 9 
+    <br>
+    <img src="https://raw.githubusercontent.com/EDAII/Algoritmos_Busca_Alianca_Rebelde/refs/heads/main/Imagens/missao1_5.png" width="800">
+    <br>
+    <b>Autoras:</b> Larissa Stéfane e Mylena Angélica </a>.
+    <br>
+</div>
+
+<div align="center">
+    Figura 10 
+    <br>
+    <img src="https://raw.githubusercontent.com/EDAII/Algoritmos_Busca_Alianca_Rebelde/refs/heads/main/Imagens/missao1_6.png" width="800">
+    <br>
+    <b>Autoras:</b> Larissa Stéfane e Mylena Angélica </a>.
+    <br>
+</div>
+
 ### Missão 2 - Busca Binária
 
 ### Missão 3 - Busca por Interpolação
