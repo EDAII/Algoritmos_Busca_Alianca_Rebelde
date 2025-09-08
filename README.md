@@ -14,6 +14,9 @@
 
 **"Aliança Rebelde - Arquivos da Rebelião"** é um jogo de puzzle e simulação, onde o jogador assume o papel de um(a) Analista de Inteligência da Aliança Rebelde. Sua missão é mergulhar em bancos de dados Imperiais capturados, organizar informações cruciais e encontrar dados vitais para as operações da Aliança. Cada desafio do jogo é uma simulação de como os algoritmos de busca e ordenação são aplicados para transformar dados brutos em vantagem estratégica, com uma narrativa inspirada no universo Star Wars.
 
+Para compreender melhor sobre o jogo, suas missões e como eles estão relacionados aos algoritmos de busca, acesse a [Descrição](Descricao.md).
+
+
 **Número da Lista**: 1
 **Conteúdo da Disciplina**: Algoritmos de Busca  <br>
 
