@@ -35,6 +35,24 @@
   - **Fase 2:** Utilize a informação do primeiro contêiner para encontrar um segundo, otimizando a busca com métodos de reorganização de dados.
   - **Fase 3:** Em um catálogo de mais de 400 contêineres, utilize uma tabela de índices fornecida para reduzir o espaço de busca e encontrar o item final de contrabando, provando a eficiência da busca sequencial indexada.
 
+### MISSÃO 2: Localizando um Infiltrado
+#### Algoritmo: Busca Binária
+
+- **Contexto:** Há um agente Imperial infiltrado na Aliança. Os registros da inteligência estão armazenados em uma lista ordenada por ID, e apenas a eficiência da busca binária pode localizar rapidamente o alvo antes que o Império descubra a operação.
+- **Descrição:** A missão é dividida em fases que representam cenários diferentes da busca binária:
+  - **Fase 1**: Localize o infiltrado pelo ID exato usando a lógica de dividir para conquistar.
+  - **Fase 2:** Descubra a primeira ocorrência de um ID duplicado em meio a registros repetidos, simulando a necessidade de precisão em listas não únicas.
+  - **Fase 3:** Confirme rapidamente se existe algum agente dentro de um intervalo de IDs, utilizando duas buscas binárias (limites inferior e superior), para validar a presença de registros em faixas específicas.
+
+### MISSÃO 3: Sintonizando a Frequência Secreta
+#### Algoritmo: Busca por Interpolação
+
+- **Contexto:** Uma transmissão da Aliança está escondida em meio a um espectro de canais uniformemente distribuídos. Para não chamar a atenção do Império, é preciso localizar o sinal com o mínimo de passos possível.
+- **Descrição:** O desafio simula a busca por interpolação em um espectro de frequências:
+  - **Fase Única:** O jogador deve utilizar a fórmula da interpolação para estimar a posição da frequência secreta no intervalo atual (low e high). A cada passo, os valores de pos, arr[low], arr[high] e arr[pos] são exibidos, e o jogador decide se deve mover os limites ou se encontrou o alvo.
+  - O objetivo é demonstrar como a interpolação aproveita a distribuição uniforme para convergir mais rapidamente ao valor alvo do que a busca binária em alguns cenários.
+
+
 ### MISSÃO 4: Acesso Rápido aos Arquivos da Frota
 #### Algoritmo: Hashing
 
