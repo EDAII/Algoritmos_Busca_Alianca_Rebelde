@@ -26,6 +26,16 @@ Para compreender melhor sobre o jogo, suas missões e como eles estão relaciona
 | 21/1039573 | Larissa Stéfane Barboza Santos |
 | 21/1029497  | Mylena Angélica Silva Farias  |
 
+## Inspiração
+
+A inspiração para este jogo surgiu a partir de um projeto desenvolvido anteriormente pelas mesmas estudantes na disciplina de **Projeto de Algoritmos**, no qual foi criado um jogo de missões no contexto da Aliança Rebelde de *Star Wars*. O objetivo era demonstrar como os algoritmos poderiam ser aplicados em cenários militares ao mesmo tempo que proporcionava um aprendizado mais didático e lúdico. Com base nessa ideia inicial, decidimos dar continuidade ao projeto na disciplina de **Estrutura de Dados 2**, expandindo e aprimorando a proposta. 
+
+Os repositórios do projeto de **Projeto de Algoritmos** podem ser acessados nos links abaixo:  
+
+- [Greed – Aliança Rebelde](https://github.com/projeto-de-algoritmos-2025/Greed_Alianca_Rebelde)  
+- [Divide and Conquer – Aliança Rebelde 2](https://github.com/projeto-de-algoritmos-2025/DC_Alianca_Rebelde_2)  
+- [Programação Dinâmica – Aliança Rebelde: Confronto Final](https://github.com/projeto-de-algoritmos-2025/PD_Alianca_Rebelde_Confronto_Final)  
+
 
 ## Missões do Jogo (Desafios de Algoritmos)
 
