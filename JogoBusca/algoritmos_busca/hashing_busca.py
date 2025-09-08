@@ -4,27 +4,23 @@ import random
 
 # Funções de Hash e Rehash
 def hashing_divisao(chave, tamanho_tabela):
-    """Calcula o índice de hash usando o método da divisão."""
     soma_ascii = sum(ord(char) for char in chave)
     return soma_ascii % tamanho_tabela
 
 def sondagem_linear(indice_inicial, i, tamanho_tabela):
-    """Função de rehash para sondagem linear."""
+
     return (indice_inicial + i) % tamanho_tabela
 
 def hashing_duplo_passo(chave, tamanho_tabela):
-    """Calcula o passo do rehash para hashing duplo."""
     soma_ascii = sum(ord(char) for char in chave)
     # Garante que o passo não seja 0
     return 1 + (soma_ascii % (tamanho_tabela - 1))
 
 def sondagem_dupla(indice_inicial, i, passo_duplo, tamanho_tabela):
-    """Função de rehash para sondagem dupla."""
     return (indice_inicial + i * passo_duplo) % tamanho_tabela
 
 # Funções para Construção e Busca em Tabelas
 def construir_tabela_hash_encadeamento(dados, tamanho_tabela):
-    """Constrói uma tabela de hash usando encadeamento separado."""
     tabela = [[] for _ in range(tamanho_tabela)]
     for item in dados:
         chave = item['chave']
@@ -33,7 +29,6 @@ def construir_tabela_hash_encadeamento(dados, tamanho_tabela):
     return tabela
 
 def construir_tabela_hash_fechada(dados, tamanho_tabela):
-    """Constrói uma tabela de hash fechada para simulação."""
     tabela = [None] * tamanho_tabela
     for item in dados:
         chave = item['chave']
@@ -45,10 +40,6 @@ def construir_tabela_hash_fechada(dados, tamanho_tabela):
     return tabela
 
 def simular_caminho_sondagem(chave, tabela, tipo_sondagem="linear"):
-    """
-    Simula e retorna a sequência de índices que uma busca percorreria.
-    Esta é a chave para a nova mecânica!
-    """
     valor_numerico = sum(ord(char) for char in chave)
     tamanho_tabela = len(tabela)
     indice_inicial = hashing_divisao(chave, tamanho_tabela)
@@ -76,9 +67,7 @@ def simular_caminho_sondagem(chave, tabela, tipo_sondagem="linear"):
     return caminho
 
 def encontrar_item_em_encadeamento(tabela, chave_alvo):
-    """
-    Encontra um item e retorna sua posição exata no bucket.
-    """
+
     indice_bucket = hashing_divisao(chave_alvo, len(tabela))
     bucket = tabela[indice_bucket]
     for i, item in enumerate(bucket):
