@@ -51,7 +51,7 @@ Abaixo estão os screenshots do projeto
 ### Código
 
 <div align="center">
-    Figura 3 
+    Figura 2 
     <br>
     <img src="https://raw.githubusercontent.com/EDAII/Algoritmos_Busca_Alianca_Rebelde/refs/heads/main/Imagens/imagemcodigo.png" width="800">
     <br>
@@ -139,14 +139,10 @@ Abaixo estão os screenshots do projeto
 
 ### Missão 2 - Busca Binária
 
-### Missão 3 - Busca por Interpolação
-
-### Missão 4 - Hashing
-
 <div align="center">
     Figura 11 
     <br>
-    <img src="https://raw.githubusercontent.com/EDAII/Algoritmos_Busca_Alianca_Rebelde/refs/heads/main/Imagens/missao4_1.png" width="800">
+    <img src="https://github.com/EDAII/Algoritmos_Busca_Alianca_Rebelde/blob/main/Imagens/missao2_intro.png" width="800">
     <br>
     <b>Autoras:</b> Larissa Stéfane e Mylena Angélica </a>.
     <br>
@@ -155,7 +151,7 @@ Abaixo estão os screenshots do projeto
 <div align="center">
     Figura 12 
     <br>
-    <img src="https://raw.githubusercontent.com/EDAII/Algoritmos_Busca_Alianca_Rebelde/refs/heads/main/Imagens/missao4_2.png" width="800">
+    <img src="https://github.com/EDAII/Algoritmos_Busca_Alianca_Rebelde/blob/main/Imagens/missao2_fase1.png" width="800">
     <br>
     <b>Autoras:</b> Larissa Stéfane e Mylena Angélica </a>.
     <br>
@@ -164,6 +160,82 @@ Abaixo estão os screenshots do projeto
 <div align="center">
     Figura 13 
     <br>
+    <img src="https://github.com/EDAII/Algoritmos_Busca_Alianca_Rebelde/blob/main/Imagens/missao2_fase2.png" width="800">
+    <br>
+    <b>Autoras:</b> Larissa Stéfane e Mylena Angélica </a>.
+    <br>
+</div>
+
+<div align="center">
+    Figura 14
+    <br>
+    <img src="https://github.com/EDAII/Algoritmos_Busca_Alianca_Rebelde/blob/main/Imagens/missao2_fase3.png?raw=true" width="800">
+    <br>
+    <b>Autoras:</b> Larissa Stéfane e Mylena Angélica </a>.
+    <br>
+</div>
+
+<div align="center">
+    Figura 15
+    <br>
+    <img src="https://github.com/EDAII/Algoritmos_Busca_Alianca_Rebelde/blob/main/Imagens/missao2_concluida.png" width="800">
+    <br>
+    <b>Autoras:</b> Larissa Stéfane e Mylena Angélica </a>.
+    <br>
+</div>
+
+### Missão 3 - Busca por Interpolação
+
+<div align="center">
+    Figura 16 
+    <br>
+    <img src="https://github.com/EDAII/Algoritmos_Busca_Alianca_Rebelde/blob/main/Imagens/missao3_intro.png" width="800">
+    <br>
+    <b>Autoras:</b> Larissa Stéfane e Mylena Angélica </a>.
+    <br>
+</div>
+
+<div align="center">
+    Figura 17 
+    <br>
+    <img src="https://github.com/EDAII/Algoritmos_Busca_Alianca_Rebelde/blob/main/Imagens/missao3_fase1.png" width="800">
+    <br>
+    <b>Autoras:</b> Larissa Stéfane e Mylena Angélica </a>.
+    <br>
+</div>
+
+<div align="center">
+    Figura 18 
+    <br>
+    <img src="https://github.com/EDAII/Algoritmos_Busca_Alianca_Rebelde/blob/main/Imagens/missao3_concluida.png" width="800">
+    <br>
+    <b>Autoras:</b> Larissa Stéfane e Mylena Angélica </a>.
+    <br>
+</div>
+
+### Missão 4 - Hashing
+
+<div align="center">
+    Figura 19 
+    <br>
+    <img src="https://raw.githubusercontent.com/EDAII/Algoritmos_Busca_Alianca_Rebelde/refs/heads/main/Imagens/missao4_1.png" width="800">
+    <br>
+    <b>Autoras:</b> Larissa Stéfane e Mylena Angélica </a>.
+    <br>
+</div>
+
+<div align="center">
+    Figura 20 
+    <br>
+    <img src="https://raw.githubusercontent.com/EDAII/Algoritmos_Busca_Alianca_Rebelde/refs/heads/main/Imagens/missao4_2.png" width="800">
+    <br>
+    <b>Autoras:</b> Larissa Stéfane e Mylena Angélica </a>.
+    <br>
+</div>
+
+<div align="center">
+    Figura 21
+    <br>
     <img src="https://raw.githubusercontent.com/EDAII/Algoritmos_Busca_Alianca_Rebelde/refs/heads/main/Imagens/missao4_3.png" width="800">
     <br>
     <b>Autoras:</b> Larissa Stéfane e Mylena Angélica </a>.
@@ -171,7 +243,7 @@ Abaixo estão os screenshots do projeto
 </div>
 
 <div align="center">
-    Figura 14 
+    Figura 22 
     <br>
     <img src="https://raw.githubusercontent.com/EDAII/Algoritmos_Busca_Alianca_Rebelde/refs/heads/main/Imagens/missao4_4.png" width="800">
     <br>
@@ -180,7 +252,7 @@ Abaixo estão os screenshots do projeto
 </div>
 
 <div align="center">
-    Figura 15 
+    Figura 23 
     <br>
     <img src="https://raw.githubusercontent.com/EDAII/Algoritmos_Busca_Alianca_Rebelde/refs/heads/main/Imagens/missao4_5.png" width="800">
     <br>
