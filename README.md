@@ -54,7 +54,7 @@ Cada missão é um minigame projetado para ensinar a lógica e as etapas de um a
   - **Objetivo:** Usar o código de registro de uma nave (a "chave") para acessar instantaneamente suas especificações em um grande catálogo.
 
 ## Link do vídeo
-
+[Assista ao vídeo aqui](https://youtu.be/ZDJqOnhZRE0)
 
 ## Screenshots
 
